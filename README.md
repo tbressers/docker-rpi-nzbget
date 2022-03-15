@@ -1,12 +1,10 @@
 # docker-rpi-nzbget
 
-<img src="https://badgen.net/badge/platform/raspberry%20pi?list=1"/> <a href="https://hub.docker.com/r/dtroncy/rpi-nzbget"><img src="https://badgen.net/badge/icon/docker?icon=docker&label"/></a> <a href="https://travis-ci.org/dtroncy/docker-rpi-nzbget"><img src="https://badgen.net/travis/dtroncy/docker-rpi-nzbget/master?icon=travis&label=build"/></a>
-
 This is a raspberry pi compatible nzbget DockerFile.
 
 To build it :
 
-    docker build --build-arg nzbget_version=$nzbget_version -t dtroncy/rpi-nzbget .
+    docker build --build-arg nzbget_version=$nzbget_version -t tbressers/rpi-nzbget .
 
 $nzbget_version is version of nzbget you want to install.
 
@@ -18,7 +16,7 @@ To run it (with image on docker hub) :
     -v /etc/localtime:/etc/localtime:ro \
     --restart unless-stopped \
     --name nzbget \
-    dtroncy/rpi-nzbget
+    tbressers/rpi-nzbget
 
 Description of parameters :
   - **-d** : to launch container as demon
@@ -27,7 +25,7 @@ Description of parameters :
   - **-v /etc/localtime:/etc/localtime:ro** : synchronise time between host and container
   - **--restart unless-stopped** : restart the container unless it has been stopped by user
   - **--name nzbget** : container's name
-  - **dtroncy/rpi-nzbget** : image's name
+  - **tbressers/rpi-nzbget** : image's name
 
 The default login/password are :
   - login : **nzbget**
