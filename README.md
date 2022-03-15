@@ -7,7 +7,10 @@ To build it :
 
 (you may want to update the version inside the build.sh)
 
-To run it (with image on docker hub) :
+To load it from pre-build image:
+    docker load -i rpi-nzbget.tar
+
+To run it (with pre-build tar image) :
 
     docker run -d -p 6789:6789 \
     -v /path_to_your_config_folder:/volumes/config \
@@ -15,7 +18,7 @@ To run it (with image on docker hub) :
     -v /etc/localtime:/etc/localtime:ro \
     --restart unless-stopped \
     --name nzbget \
-    tbressers/rpi-nzbget
+    rpi-nzbget
 
 Description of parameters :
   - **-d** : to launch container as demon
