@@ -3,11 +3,13 @@
 This is a raspberry pi compatible nzbget DockerFile.
 
 To build it :
+
     build.sh
 
 (you may want to update the version inside the build.sh)
 
 To load it from pre-build image:
+
     docker load -i rpi-nzbget.tar
 
 To run it (with pre-build tar image) :
