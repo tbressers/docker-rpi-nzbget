@@ -3,10 +3,9 @@
 This is a raspberry pi compatible nzbget DockerFile.
 
 To build it :
+    build.sh
 
-    docker build --build-arg nzbget_version=$nzbget_version -t tbressers/rpi-nzbget .
-
-$nzbget_version is version of nzbget you want to install.
+(you may want to update the version inside the build.sh)
 
 To run it (with image on docker hub) :
 
